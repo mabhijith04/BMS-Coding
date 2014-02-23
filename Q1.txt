@@ -1,0 +1,20 @@
+Given an integer N, find the smallest integer greater than N which is prime. 
+
+INPUT
+The first line of input contains T, the number of test cases. T test cases follow. Each test case contains a single integer N. 
+
+OUTPUT
+This should contain T lines, each containing the smallest prime integer greater than N. 
+
+CONSTRAINTS
+1 <= T <= 5
+1 <= N <= 100 
+
+SAMPLE INPUT
+2
+6
+11 
+
+SAMPLE OUTPUT
+7
+13
