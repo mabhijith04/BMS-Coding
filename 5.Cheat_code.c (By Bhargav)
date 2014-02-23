@@ -1,0 +1,35 @@
+output1 = []
+output0 = []
+ip = []
+
+
+cheat = [ [1,0,0], [0,1,1], [1,1,1], [1,2,2], [2,3,3], [3,5,5], [5,8,8], [8,13,13], [13,21,21], [21,34,34], [34,55,55], [55,89,89], [89,144,144], [144,233,233], [233,377,377], [377,610,610], [610,987,987], [987,1597,1597], [1597,2584,2584], [2584,4181,4181], [4181,6765,6765], [6765,10946,10946], [10946,17711,17711], [17711,28657,28657], [28657,46368,46368], [46368,75025,75025], [75025,121393,121393], [121393,196418,196418], [196418,317811,317811], [317811,514229,514229], [514229,832040,832040] ]
+
+def fib(n):
+	global ones
+	global zeros
+	if n<30:
+		zeros = zeros + cheat[n][0]
+		ones  = ones + cheat[n][1]
+		return cheat[n][2]
+	else:
+		return fib(n-1) + fib(n-2)
+
+
+t = input()
+for i in range(t):
+	ip.append(input())
+
+for i in ip:
+	ones = 0
+	zeros = 0
+	if i<30:
+		output0.append(cheat[i][0])
+		output1.append(cheat[i][1])
+	else:
+		fib(i)
+		output0.append(zeros)
+		output1.append(ones)
+
+for i in range(len(output1)):
+	print output0[i],output1[i]
